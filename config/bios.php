@@ -7,6 +7,10 @@ return [
         1 => 'Penerimaan',
         2 => 'Pengeluaran',
     ],
+    'status_user' => [
+        0 => 'Tidak Aktif',
+        1 => 'Aktif'
+    ],
     'ref_url' => [
         'fakultas' => 'http://bios.djpbn.kemenkeu.go.id/web_services/ref_fakultas',
         'jurusan' => 'http://bios.djpbn.kemenkeu.go.id/web_services/ref_jurusan',

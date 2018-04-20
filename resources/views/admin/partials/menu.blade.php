@@ -48,7 +48,7 @@
 
 
 <li class="nav-item">
-  <a class='sidebar-link' href="#">
+  <a class='sidebar-link' href="{{ route('user.index') }}">
     <span class="icon-holder">
       <i class="c-orange-500 ti-user"></i>
     </span>

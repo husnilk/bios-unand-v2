@@ -55,4 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('penerimaan', 'AkunPenerimaanController');
     Route::resource('pengeluaran', 'AkunPengeluaranController');
     Route::resource('saldo', 'SaldoController');
+
+    Route::resource('user', 'UserController');
+    Route::get('userdata', 'UserController@userData')->name('user.userdata');
 });
