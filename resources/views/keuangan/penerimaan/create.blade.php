@@ -1,41 +1,44 @@
-@extends('layouts.app')
+@extends('admin.default')
 
 @section('content')
-    <?php $i = 1; ?>
+<?php $i = 1; ?>
+<div id="mainContetn">
+    <div class="container-fluid">
+        <div class="masonry-item col-md-12">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-
-                        Tambah Akun Penerimaan
-
+            <div class="bgc-white p-20 bd">
+                <div class="row">
+                    <div class="col-md-8">
+                        
+                        <h4 class="c-grey-900">
+                            Tambah Akun Penerimaan
+                        </h4>
+                        
+                    </div>
+                    <div class="col-md-4">
                         <a href="{!! route('penerimaan.index') !!}" class="btn btn-primary btn-sm form pull-right">
                             Close <span class="glyphicon glyphicon-minus-sign"></span>
                         </a>
                     </div>
-
-                    <div class="panel-body">
-
-                        {{ Form::open(['route' => 'penerimaan.store', 'class' => 'form-horizontal', 'method' => 'POST']) }}
+                </div>
+                
+                
+                <div class="mT-30">
+                    {{ Form::open(['route' => 'penerimaan.store', 'class' => 'form-horizontal', 'method' => 'POST']) }}
 
                         @include('keuangan.penerimaan._form')
 
-                        {{ Form::close() }}
+                    {{ Form::close() }}
+                    
+                    <hr>
 
-                    </div>
-
-                    <div class="panel-body">
-
-                        @include('keuangan.penerimaan._table')
-
-                    </div>
-
+                    @include('keuangan.penerimaan._table')
                 </div>
             </div>
         </div>
     </div>
+</div>
+    
 
 @endsection
 

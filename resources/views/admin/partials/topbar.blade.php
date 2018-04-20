@@ -11,7 +11,7 @@
       <li class="dropdown">
         <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
           <div class="peer mR-10">
-            <img class="w-2r bdrs-50p" src="{{ auth()->user()->avatar }}" alt="">
+            <img class="w-2r bdrs-50p" src="avatar/{{ auth()->user()->avatar }}" alt="">
           </div>
           <div class="peer">
             <span class="fsz-sm c-grey-900">{{ auth()->user()->name }}</span>
@@ -27,7 +27,7 @@
           </li>
           <li>
             <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-              <i class="ti-email mR-10"></i>
+              <i class="ti-key mR-10"></i>
               <span>Ubah Password</span>
             </a>
           </li>

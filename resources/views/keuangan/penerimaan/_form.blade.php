@@ -1,25 +1,25 @@
-<div class="form-group">
+<div class="form-group row">
     {!! Form::label("null", "Jenis Akun", ["class" => "col-sm-2 control-label"]) !!}
     <div class="col-sm-10">
-        <p class="form-control-static">Penerimaan</p>
+        <p class="form-control-static"><strong>Penerimaan</strong></p>
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group row">
     {!! Form::label('Tanggal', "tanggal", ['class' => 'col-sm-2 control-label']) !!}
     <div class="col-sm-4">
         {!! Form::date('tanggal', null, ['class' => 'form-control', 'placeholder' => 'tanggal']) !!}
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group row">
     {!! Form::label("kode_akun_id", "Kode Akun", ["class" => "col-sm-2 control-label"]) !!}
     <div class="col-sm-8">
         {!! Form::select("kode_akun_id", $kodeAkunRef, null, ["class" => "form-control"]) !!}
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group row">
     {!! Form::label('saldo', "Saldo", ['class' => 'col-sm-2 control-label']) !!}
     <div class="col-sm-4">
         {!! Form::text('saldo', null, ['class' => 'form-control', 'placeholder' => 'Saldo']) !!}
@@ -27,8 +27,9 @@
 </div>
 
 
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-8">
+<div class="form-group row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
         {!! Form::submit('Simpan', ['class'=>'btn btn-primary']) !!}
     </div>
 </div>

@@ -1,9 +1,13 @@
-<button class="btn btn-danger btn-sm text-right" onclick="confirmDelete()">Hapus</button>
+
 
 <table class="table table-bordered" id="ref-table">
     <thead>
     <tr>
-        <th class="text-center"></th>
+        <th class="text-center">
+            <button class="btn btn-danger btn-sm" onclick="confirmDelete()">
+                <i class="ti-trash"></i>
+            </button>
+        </th>
         <th class="text-center">Tanggal</th>
         <th class="text-center">Kode Akun</th>
         <th class="text-center">Saldo</th>
