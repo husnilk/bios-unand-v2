@@ -1,30 +1,24 @@
-@extends('layouts.app')
+@extends('admin.default')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
 
-                        Tambah Data Layanan
-
-                    </div>
-
-                    <div class="panel-body">
-
-                        {!! Form::open(['route' => 'layanan.store', 'class' => 'form form-horizontal']) !!}
-
-                        @include('layanan._form')
-
-                        {!! Form::close() !!}
-
-                    </div>
+<div id="mainContetn">
+    <div class="container-fluid">
+        <div class="masonry-item col-md-12">
+            
+            <div class="bgc-white p-20 bd">
+                <h6 class="c-grey-900">Tambah Data Layanan</h6>
+                <div class="mT-30">
+                    {!! Form::open(['route' => 'layanan.store', 'class' => 'form form-horizontal']) !!}
+                    
+                    @include('layanan._form')
+                    
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 @endsection
 
 

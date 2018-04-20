@@ -172,8 +172,8 @@ class LayananController extends Controller
 
         return Datatables::of($layanans)
             ->addColumn('action', function ($layanan) {
-                $buttonEdit = '<a href="'.route('layanan.edit', [$layanan->id]).'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
-                $buttonShow = '<a href="'.route('layanan.show', [$layanan->id]).'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-eye-open"></i> Detail</a>';
+                $buttonEdit = '<a href="'.route('layanan.edit', [$layanan->id]). '" class="btn"><i class="ti-pencil"></i> </a>';
+                $buttonShow = '<a href="'.route('layanan.show', [$layanan->id]). '" class="btn"><i class="ti-eye"></i></a>';
                 return $buttonEdit. " " .  $buttonShow;
             })
             ->make(true);

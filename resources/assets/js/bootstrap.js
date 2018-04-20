@@ -16,6 +16,8 @@ import './utils';
 
 import './sweetalert2';
 
+import './select2/select2';
+
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
 

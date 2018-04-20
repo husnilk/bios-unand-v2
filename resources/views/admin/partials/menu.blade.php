@@ -18,6 +18,16 @@
     <li><a href="{!! route('ref.jenisrekening') !!}">Rekening</a></li>
   </ul>
 </li>
+
+<li class="nav-item">
+  <a class='sidebar-link' href="{!! route('layanan.index') !!}">
+    <span class="icon-holder">
+      <i class="c-orange-500 ti-cloud"></i>
+    </span>
+    <span class="title">Layanan</span>
+  </a>
+</li>
+
 <li class="nav-item dropdown">
   <a class="dropdown-toggle" href="javascript:void(0);">
     <span class="icon-holder">
@@ -34,14 +44,9 @@
     <li><a href="{!! route('saldo.index') !!}">Saldo</a></li>
   </ul>
 </li>
-<li class="nav-item">
-  <a class='sidebar-link' href="{!! route('layanan.index') !!}">
-    <span class="icon-holder">
-      <i class="c-orange-500 ti-cloud"></i>
-    </span>
-    <span class="title">Layanan</span>
-  </a>
-</li>
+
+
+
 <li class="nav-item">
   <a class='sidebar-link' href="#">
     <span class="icon-holder">
