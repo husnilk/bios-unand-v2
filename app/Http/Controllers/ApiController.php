@@ -35,6 +35,7 @@ class ApiController extends Controller
         $data = [];
 
         foreach ($layanans as $layanan) {
+
             $objLayanan = new \stdClass();
             $objLayanan->kode_satker = $kodeSatker;
             $objLayanan->tahun = $layanan->tahun;
@@ -45,9 +46,9 @@ class ApiController extends Controller
             $objLayanan->kode_jurusan = $layanan->jurusan;
             $objLayanan->tanggal_update = Carbon::parse($layanan->tanggal_update)->format('Y/m/d H:m:s');
 
-            $data [] = $objLayanan;
+            $data[] = $objLayanan;
         }
-        $response = [ 'layanan_pendidikan' => $data];
+        $response = ['layanan_pendidikan' => $data];
 
         return $response;
     }
@@ -82,6 +83,7 @@ class ApiController extends Controller
         $response["Penerimaan"] = $data;
 
         return $response;
+
     }
 
     public function pengeluaran(Request $request)
@@ -114,6 +116,7 @@ class ApiController extends Controller
         $response["Pengeluaran"] = $data;
 
         return $response;
+
     }
 
     public function saldo(Request $request)
@@ -140,12 +143,13 @@ class ApiController extends Controller
             $objLayanan->Saldo = $akun->saldo;
             $objLayanan->TanggalUpdate = $akun->tanggal_update;
 
-            $data [] = $objLayanan;
+            $data[] = $objLayanan;
         }
 
         $response = [];
         $response["Saldo"] = $data;
 
         return $response;
+
     }
 }

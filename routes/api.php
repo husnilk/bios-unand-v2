@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('layanan', 'ApiController@layanan');
-Route::post('penerimaan', 'ApiController@penerimaan');
-Route::post('pengeluaran', 'ApiController@pengeluaran');
-Route::post('saldo', 'ApiController@saldo');
+Route::get('layanan', 'ApiController@layanan');
+Route::get('penerimaan', 'ApiController@penerimaan');
+Route::get('pengeluaran', 'ApiController@pengeluaran');
+Route::get('saldo', 'ApiController@saldo');
