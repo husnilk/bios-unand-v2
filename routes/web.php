@@ -55,4 +55,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('penerimaan', 'AkunPenerimaanController');
     Route::resource('pengeluaran', 'AkunPengeluaranController');
     Route::resource('saldo', 'SaldoController');
+    
+    Route::get('profile', 'ProfileController@show')->name('profile.show');
+    Route::get('profile/edit', 'ProfileController@edit')->name('profile.edit');
+    Route::post('profile/edit', 'ProfileController@update')->name('profile.update');
+
+    Route::get('password', 'ProfileController@password')->name('password.edit');
+    Route::post('password', 'ProfileController@savepass')->name('password.update');
 });
