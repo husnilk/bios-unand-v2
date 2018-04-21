@@ -20,13 +20,13 @@
         <ul class="dropdown-menu fsz-sm">
 
           <li>
-            <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+            <a href="{{ route('profile.show') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
               <i class="ti-user mR-10"></i>
               <span>Profil</span>
             </a>
           </li>
           <li>
-            <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+            <a href="{{ route('password.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
               <i class="ti-key mR-10"></i>
               <span>Ubah Password</span>
             </a>
