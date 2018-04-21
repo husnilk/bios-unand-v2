@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
@@ -14,19 +15,49 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
 
-        return view('profile.user', compact('user'));
+        $profile = DB::table('users')
+            ->select(
+                'email', 
+                'username', 
+                'users.name', 
+                DB::raw('roles.name as role'))
+            ->from('users')
+            ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
+            ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
+            ->where('model_has_roles.model_type', 'App\\User')
+            ->where('users.id', $user->id)
+            ->get()
+            ->first();
+
+        return view('profile.user', compact('profile'));
     }
 
     public function edit()
     {
         $user = Auth::user();
-        return view('profile.edit', compact('user'));
+
+        $profile = DB::table('users')
+            ->select(
+                'email',
+                'username',
+                'users.name',
+                DB::raw('roles.name as role')
+            )
+            ->from('users')
+            ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
+            ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
+            ->where('model_has_roles.model_type', 'App\\User')
+            ->where('users.id', $user->id)
+            ->get()
+            ->first();
+
+        return view('profile.edit', compact('user', 'profile'));
     }
 
     public function update(Request $request)
     {
         $user = Auth::user();
-        $user->name = $request->input('nama');
+        $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->save();
 
